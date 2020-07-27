@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.SettingFragment">
+
+    <TextView
+        android:id="@+id/tv_goals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_left_row"
+        android:drawablePadding="5dp"
+        android:text="@string/tv_golas"
+        android:textColor="@color/colorBlack"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_left_row" />
+
+    <RelativeLayout
+        android:id="@+id/Rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:padding="10dp"
+      android:layout_below="@+id/tv_goals">
+
+        <ImageView
+            android:id="@+id/img_info"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/imagebackground"
+            android:contentDescription="@string/img_todo"
+            android:src="@drawable/ic_info"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintEnd_toStartOf="@+id/img_knowyourbetter" />
+
+        <ImageView
+            android:id="@+id/img_knowyourbetter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toEndOf="@+id/img_info"
+            android:layout_toRightOf="@+id/img_info"
+            android:background="@drawable/imagebackground"
+            android:src="@drawable/ic_knowledge"
+            app:layout_constraintDimensionRatio="H,16:9"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/img_risk"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toEndOf="@+id/img_knowyourbetter"
+            android:layout_toRightOf="@+id/img_knowyourbetter"
+            android:background="@drawable/imagebackground"
+            android:contentDescription="@string/img_todo"
+            android:src="@drawable/ic_risk"
+            app:layout_constraintDimensionRatio="H,16:9" />
+
+        <ImageView
+            android:id="@+id/img_family"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toEndOf="@+id/img_risk"
+            android:layout_toRightOf="@+id/img_risk"
+            android:background="@drawable/imagebackground"
+            android:contentDescription="@string/img_todo"
+            android:src="@drawable/ic_family"
+            app:layout_constraintDimensionRatio="H,16:9" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="61dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="350dp"
+        android:background="@drawable/addmore"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_arrow_back" />
+
+    <ImageView
+        android:id="@+id/img_forword"
+        android:layout_width="61dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="350dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/addmore"
+        android:src="@drawable/ic_arrow_forward"
+        android:layout_alignParentRight="true"
+        android:contentDescription="TODO"/>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:layout_toStartOf="@+id/img_forword"
+        android:background="#fff"
+        android:layout_toEndOf="@+id/img_back"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/Rl_image"
+        android:layout_toLeftOf="@+id/img_forword"
+        android:layout_toRightOf="@+id/img_back">
+
+
+        <EditText
+            android:id="@+id/ET_investment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="10dp"
+            android:hint="@string/Et_investment"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/TV_recurring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ET_investment"
+            android:layout_margin="8dp"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="@string/TV_recurring"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+
+        <Switch
+            android:id="@+id/Sw_fixed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_recurring"
+            android:layout_margin="8dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:switchPadding="20dp"
+            android:text="@string/fixed"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/TV_variable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_recurring"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/Sw_fixed"
+            android:layout_toRightOf="@+id/Sw_fixed"
+            android:padding="5dp"
+            android:text="@string/variable"
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/ET_datepurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_variable"
+            android:layout_margin="8dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/date_of_Purchase"
+            android:importantForAutofill="no"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="12sp"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/ET_units"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ET_datepurchase"
+            android:layout_margin="8dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/number_of_units"
+            android:importantForAutofill="no"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="12sp"
+            tools:ignore="TextFields" />
+
+
+        <EditText
+            android:id="@+id/ET_purchase_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ET_units"
+            android:layout_margin="8dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/purchase_price"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColorHint="@color/colorBlack"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/Btn_add"
+            android:layout_width="154dp"
+            android:layout_height="33dp"
+            android:layout_below="@+id/ET_purchase_price"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/addmore"
+            android:text="@string/add_more"
+            android:textColor="@color/colorwhite" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_message"
+            android:contentDescription="@string/img_todo"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:background="@color/colorOrange"
+        android:contentDescription="@string/img_todo"
+        android:src="@drawable/ic_baseline_more"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="300dp"
+        android:layout_alignParentRight="true" />
+
+
+
+</RelativeLayout>

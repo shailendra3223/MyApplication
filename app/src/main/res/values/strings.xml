@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="tv_golas">Goals</string>
+    <string name="imgtodo">Your info</string>
+    <string name="img_todo">Your info</string>
+    <string name="Et_investment">Who is this investment for?*</string>
+    <string name="TV_recurring">Is the equity one time or recurring</string>
+    <string name="variable">Variable</string>
+    <string name="date_of_Purchase">Date of Purchase</string>
+    <string name="number_of_units">Number of Units</string>
+    <string name="purchase_price">Purchase Price</string>
+    <string name="fixed">Fixed</string>
+    <string name="add_more">Add More</string>
+    <string name="text">serif</string>
+    <string name="no_item_available">No Item Available</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

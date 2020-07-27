@@ -86,8 +86,8 @@
         android:layout_height="34dp"
         android:layout_marginTop="350dp"
         android:background="@drawable/addmore"
-        android:contentDescription="TODO"
-        android:src="@drawable/ic_arrow_back" />
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="@string/imgtodo" />
 
     <ImageView
         android:id="@+id/img_forword"
@@ -98,7 +98,7 @@
         android:background="@drawable/addmore"
         android:src="@drawable/ic_arrow_forward"
         android:layout_alignParentRight="true"
-        android:contentDescription="TODO"/>
+        android:contentDescription="@string/imgtodo" />
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -212,17 +212,8 @@
             android:text="@string/add_more"
             android:textColor="@color/colorwhite" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:src="@drawable/ic_message"
-            android:contentDescription="@string/img_todo"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="16dp"
-            android:layout_alignParentRight="true" />
+
+
 
     </RelativeLayout>
 
@@ -237,6 +228,18 @@
         android:layout_marginTop="300dp"
         android:layout_alignParentRight="true" />
 
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/img_todo"
+        android:src="@drawable/ic_message" />
 
 </RelativeLayout>

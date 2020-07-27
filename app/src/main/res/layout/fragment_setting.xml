@@ -261,17 +261,15 @@
             android:layout_width="154dp"
             android:layout_height="33dp"
             android:layout_below="@+id/ET_purchase_price"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="47dp"
             android:background="@drawable/addmore"
             android:text="@string/add_more"
-            android:textColor="@color/colorwhite" />
-
-
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorwhite"
+            android:textSize="10sp" />
 
 
     </RelativeLayout>
-
     <ImageView
         android:id="@+id/imageButton"
         android:layout_width="20dp"

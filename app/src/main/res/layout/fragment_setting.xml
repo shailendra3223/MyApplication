@@ -19,65 +19,119 @@
         android:padding="10dp"
         android:drawableLeft="@drawable/ic_left_row" />
 
-    <RelativeLayout
-        android:id="@+id/Rl_image"
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:padding="10dp"
-      android:layout_below="@+id/tv_goals">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_goals"
+        android:layout_margin="10dp"
+        android:baselineAligned="false">
 
-        <ImageView
-            android:id="@+id/img_info"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/imagebackground"
-            android:contentDescription="@string/img_todo"
-            android:src="@drawable/ic_info"
-            app:layout_constraintDimensionRatio="H,16:9"
-            app:layout_constraintEnd_toStartOf="@+id/img_knowyourbetter" />
 
-        <ImageView
-            android:id="@+id/img_knowyourbetter"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_toEndOf="@+id/img_info"
-            android:layout_toRightOf="@+id/img_info"
-            android:background="@drawable/imagebackground"
-            android:src="@drawable/ic_knowledge"
-            app:layout_constraintDimensionRatio="H,16:9"
-            tools:ignore="ContentDescription" />
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/imagebackground">
 
-        <ImageView
-            android:id="@+id/img_risk"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_toEndOf="@+id/img_knowyourbetter"
-            android:layout_toRightOf="@+id/img_knowyourbetter"
-            android:background="@drawable/imagebackground"
-            android:contentDescription="@string/img_todo"
-            android:src="@drawable/ic_risk"
-            app:layout_constraintDimensionRatio="H,16:9" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_info"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/colorwhite"/>
+            <ImageView
+                android:id="@+id/img_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/img_todo"
+                android:src="@drawable/ic_info"
+                android:layout_gravity="center"
+                app:layout_constraintDimensionRatio="H,16:9"/>
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/img_family"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_toEndOf="@+id/img_risk"
-            android:layout_toRightOf="@+id/img_risk"
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:background="@drawable/imagebackground"
-            android:contentDescription="@string/img_todo"
-            android:src="@drawable/ic_family"
-            app:layout_constraintDimensionRatio="H,16:9" />
-    </RelativeLayout>
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/know_you_better"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/colorwhite"/>
+            <ImageView
+                android:id="@+id/img_better"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/img_todo"
+                android:src="@drawable/ic_knowledge"
+                android:layout_gravity="center"
+                app:layout_constraintDimensionRatio="H,16:9"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/imagebackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TV_risk"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorwhite"/>
+            <ImageView
+                android:id="@+id/img_risk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/img_todo"
+                android:src="@drawable/ic_risk"
+                app:layout_constraintDimensionRatio="H,16:9" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/imagebackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TV_family"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/colorwhite"/>
+            <ImageView
+                android:id="@+id/img_family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/img_todo"
+                android:src="@drawable/ic_family"
+                android:layout_gravity="center"
+                app:layout_constraintDimensionRatio="H,16:9"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 
     <ImageView
@@ -87,7 +141,7 @@
         android:layout_marginTop="350dp"
         android:background="@drawable/addmore"
         android:src="@drawable/ic_arrow_back"
-        android:contentDescription="@string/imgtodo" />
+        android:contentDescription="@string/img_todo" />
 
     <ImageView
         android:id="@+id/img_forword"
@@ -98,16 +152,17 @@
         android:background="@drawable/addmore"
         android:src="@drawable/ic_arrow_forward"
         android:layout_alignParentRight="true"
-        android:contentDescription="@string/imgtodo" />
+        android:contentDescription="@string/img_todo" />
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-       android:layout_toStartOf="@+id/img_forword"
+        android:layout_toStartOf="@+id/img_forword"
         android:background="#fff"
         android:layout_toEndOf="@+id/img_back"
         android:layout_marginTop="15dp"
-        android:layout_below="@+id/Rl_image"
+        android:layout_below="@+id/ll_layout"
         android:layout_toLeftOf="@+id/img_forword"
         android:layout_toRightOf="@+id/img_back">
 

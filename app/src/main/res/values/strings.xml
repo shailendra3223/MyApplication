@@ -15,7 +15,10 @@
     <string name="no_item_available">No Item Available</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="know_you_better">Know you better</string>
+    <string name="TV_risk">Know your risk</string>
+    <string name="TV_family">Your Family</string>
+    <string name="your_info">Your info</string>
 
 
 </resources>
